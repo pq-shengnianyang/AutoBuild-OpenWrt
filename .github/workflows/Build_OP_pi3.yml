@@ -68,7 +68,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
-    - name: Configuration Customization - Build_OP_pi3
+    - name: Configuration Customization - Build_x86_64
       env:
         CONFIG_FILE: 'pi3.config'
       run: |
