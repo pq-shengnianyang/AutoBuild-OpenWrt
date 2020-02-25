@@ -4,9 +4,9 @@ on:
   release:
     types: [published]
 
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
 
   #schedule:
   #  - cron: 0 8 * * 5
@@ -66,7 +66,7 @@ jobs:
         CONFIG_FILE: 'pi3.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        chmod +x ./customize.sh && ./customize.sh
+        chmod +x ./lienol.sh && ./lienol.sh
         cd openwrt && make defconfig
         
     - name: Download package
